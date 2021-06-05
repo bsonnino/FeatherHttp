@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RestoreSources>
+      $(RestoreSources);
+      https://api.nuget.org/v3/index.json;
+      https://f.feedz.io/featherhttp/framework/nuget/index.json
+    </RestoreSources>
+  </PropertyGroup>
+  <ItemGroup >
+    <None Update="customers.xml" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FeatherHttp" Version="0.1.83-alpha.g15473de7d1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
+  </ItemGroup>
+</Project>
+
